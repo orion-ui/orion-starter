@@ -1,0 +1,50 @@
+{
+  "Component template": {
+    "prefix": "oo_template",
+    "scope": "vue",
+    "body": [
+      "<template>",
+      "\t$1",
+      "</template>",
+      "",
+      "<script setup lang=\"ts\">",
+      "",
+      "</script>",
+      "",
+      "<style scoped lang=\"less\">",
+      "",
+      "</style>",
+      ""
+    ]
+  },
+  "Add component setup": {
+    "prefix": "oo_setup",
+    "scope": "vue",
+    "body": ["<script setup lang=\"ts\">", "$1", "</script>"]
+  },
+  "Add component styles": {
+    "prefix": "oo_styles",
+    "scope": "vue",
+    "body": ["<style scoped lang=\"less\">", "$1", "</style>"]
+  },
+  "Add CSS dark theme rules": {
+    "prefix": "oo_dk",
+    "scope": "less, css, scss",
+    "body": ["[data-orion-theme=\"dark\"] & {", "\t$1", "}"]
+  },
+  "Calc px in rem": {
+    "prefix": "oo_rem",
+    "scope": "less, css, scss",
+    "body": "calc($1rem / 16)"
+  },
+  "Inject Aside": {
+    "prefix": "oo_inject_aside",
+    "scope": "typescript",
+    "body": ["const _aside = inject<OrionAside>('_aside');"]
+  },
+  "Inject Modal": {
+    "prefix": "oo_inject_modal",
+    "scope": "typescript",
+    "body": ["const _modal = inject<OrionModal>('_modal');"]
+  }
+}
