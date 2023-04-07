@@ -5,6 +5,6 @@ module.exports = {
 		'prettier',
 		'plugin:vue/vue3-recommended',
 		'@vue/typescript',
-		'@orion.ui/eslint-config-orion',
+		'plugin:@orion.ui/orion/recommended',
 	],
 };

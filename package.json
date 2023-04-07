@@ -12,12 +12,12 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
-    "@orion.ui/orion": "^1.2.2-hotfix-1.2.3.4",
+    "@orion.ui/orion": "^1.2.3",
     "vue": "^3.2.47",
     "vue-router": "^4.1.6"
   },
   "devDependencies": {
-    "@orion.ui/eslint-config-orion": "^0.1.0-alpha.2",
+    "@orion.ui/eslint-plugin-orion": "^1.0.0",
     "@types/lodash-es": "^4.17.7",
     "@types/node": "^18.14.2",
     "@vitejs/plugin-vue": "^4.0.0",
