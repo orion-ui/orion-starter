@@ -6,18 +6,18 @@ const router = createRouter({
 		{
 			path: '/',
 			name: 'home',
-			component: () => import('@/views/HomeView.vue'),
+			component: () => import('@/components/home/HomeView.vue'),
 		},
 		{
 			path: '/layout',
 			name: 'layout',
-			component: () => import('@/views/LayoutView.vue'),
+			component: () => import('@/components/shared/SharedLayout.vue'),
 			redirect: { name: 'simple-list' },
 			children: [
 				{
 					path: 'simple-list',
 					name: 'simple-list',
-					component: () => import('@/views/SimpleListView.vue'),
+					component: () => import('@/components/SimpleListView.vue'),
 				},
 			],
 		},

@@ -46,5 +46,18 @@
     "prefix": "oo_inject_modal",
     "scope": "typescript",
     "body": ["const _modal = inject<OrionModal>('_modal');"]
+  },
+  "Add getter": {
+    "prefix": "oo_get",
+    "scope": "typescript",
+    "body": ["get ${1:name} () { return this.${2:state}.${1:name}; }"]
+  },
+  "Add getter/setter": {
+    "prefix": "oo_getset",
+    "scope": "typescript",
+    "body": [
+      "get ${1:name} () { return this.${2:state}.${1:name}; }",
+      "set ${1:name} (val) { this.${2:state}.${1:name} = val; }"
+    ]
   }
 }
