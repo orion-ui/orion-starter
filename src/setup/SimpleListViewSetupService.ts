@@ -21,18 +21,9 @@ export default class SimpleListViewSetupService extends BaseSetupService<Props> 
 	get page () { return this.state.page; }
 	set page (val) { this.state.page = val; }
 
-	get filteredList () {
-		return this.state.fulllist.filter(
-			x => !this.state.search || x.title.includes(this.state.search),
-		);
-	}
-
 	get list () {
-		return this.filteredList
-			.slice(
-				(this.state.page.index - 1) * this.state.page.size,
-				this.state.page.index * this.state.page.size,
-			)
+		return this.state.fulllist
+			.filter(x => !this.state.search || x.title.includes(this.state.search))
 			.map(x => ({
 				...x,
 				title: upperFirst(x.title),

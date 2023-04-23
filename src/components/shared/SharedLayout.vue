@@ -1,7 +1,8 @@
 <template>
 	<o-layout
 		:nav-main="setup.navMain"
-		:nav-top="setup.navTop">
+		:nav-top="setup.navTop"
+		:nav-tabs="setup.navTabs">
 		<template #nav-top-left>
 			<div class="branding">
 				<img

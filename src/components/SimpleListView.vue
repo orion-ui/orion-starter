@@ -11,7 +11,8 @@
 		<o-list
 			v-model:page="setup.page"
 			:list="setup.list"
-			:total="setup.filteredList.length">
+			:total="setup.list.length"
+			use-auto-pagination>
 			<template #default="{ item }">
 				<post-card
 					:post="item"

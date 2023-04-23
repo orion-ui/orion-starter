@@ -104,6 +104,10 @@ export default class SharedLayoutSetupService extends BaseSetupService<Props> {
 		};
 	}
 
+	get navTabs (): OrionNavTabs.Props {
+		return { items: this.navMain.items.slice(0, 2) };
+	}
+
 
 	constructor (props?: Props) {
 		super(props);
