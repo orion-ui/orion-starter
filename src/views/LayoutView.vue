@@ -1,7 +1,8 @@
 <template>
 	<o-layout
 		:nav-main="navMain"
-		:nav-top="navTop">
+		:nav-top="navTop"
+		:nav-tabs="navTabs">
 		<template #nav-top-left>
 			<div class="branding">
 				<img
@@ -111,6 +112,8 @@ const navTop: OrionNavTop.Props = {
 		},
 	],
 };
+
+const navTabs: OrionNavTabs.Props = { items: navMain.items.slice(0, 2) };
 
 function simpleCallback () {
 	simpleCallbackNotif

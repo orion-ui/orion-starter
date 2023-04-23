@@ -10,8 +10,9 @@
 
 		<o-list
 			v-model:page="state.page"
+			use-auto-pagination
 			:list="list"
-			:total="filteredList.length">
+			:total="list.length">
 			<template #default="{ item }">
 				<post-card
 					:post="item"
@@ -37,18 +38,9 @@ const state = reactive({
 	} as OrionList.Props['page'],
 });
 
-const filteredList = computed(() => {
-	return state.fulllist.filter(
-		x => !state.search || x.title.includes(state.search),
-	);
-});
-
 const list = computed(() => {
-	return filteredList.value
-		.slice(
-			(state.page.index - 1) * state.page.size,
-			state.page.index * state.page.size,
-		)
+	return state.fulllist
+		.filter(x => !state.search || x.title.includes(state.search))
 		.map(x => ({
 			...x,
 			title: upperFirst(x.title),
