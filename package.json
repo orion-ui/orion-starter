@@ -10,7 +10,7 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
-    "@orion.ui/orion": "^1.2.7",
+    "@orion.ui/orion": "latest",
     "vue": "^3.2.47",
     "vue-router": "^4.1.6"
   },
